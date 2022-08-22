@@ -1,0 +1,135 @@
+@font-face {
+    font-family: ArcadeFont;
+    src: url(arcade.ttf);
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #428047;
+    margin: auto;
+    align-items: center;
+}
+
+.background {
+    width: 900px;
+    height: 500px;
+    margin: 0;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    overflow-x: hidden;
+}
+
+.audio {
+    content: url("https://www.freeiconspng.com/uploads/sound-off-music-mute-off-sound-speaker-volume-icon-16.png");
+    width: 40px;
+    filter: grayscale(1) invert(1);
+    position: absolute;
+    top: 55%;
+    left: 76%;
+    cursor: pointer;
+}
+
+.audiomute {
+    content: url("https://www.freeiconspng.com/uploads/volume-icon-28.png");
+    width: 40px;
+    cursor: pointer;
+    filter: grayscale(1) invert(1);
+}
+
+.active {
+    width: 40px;
+    filter: grayscale(1) invert(1);
+    position: absolute;
+    top: 4%;
+    left: 76%;
+    cursor: pointer;
+}
+
+.logo {
+    width: 120px;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    color: #FFF65B;
+    position: absolute;
+    top: 4.5%;
+    left: 50%;
+    font-size: 50px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    -webkit-text-stroke-width: 0.001px;
+    -webkit-text-stroke-color: black;
+    animation-name: rightToLeft;
+    animation-duration: 4.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(-450px);
+    }
+}
+
+#container {
+    width: 900px;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+
+.buttonclass {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    top: 38%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    
+    background-size: cover;
+    margin: 0;
+    height: 120px;
+    width: 220px;
+    border-radius: 25px;
+    border-style: none;
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    color: white;
+    transform: scale(1.1);
+    rotate: 2deg;
+    transition-duration: 400ms;
+}
+
+.not-active {
+    display: none;
+    transition-duration: 700ms;
+}
